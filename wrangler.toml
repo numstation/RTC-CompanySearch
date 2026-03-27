@@ -1,0 +1,9 @@
+name = "hk-company-worker"
+main = "src/worker.js"
+compatibility_date = "2026-02-11"
+
+[vars]
+DATA_GOV_HK_BASE_URL = "https://data.cr.gov.hk/cr/api/api/v1/api_builder/csv/local"
+CORS_ORIGIN = "*"
+CACHE_TTL_SEC = "300"
+RATE_LIMIT_MAX_PER_MIN = "60"
