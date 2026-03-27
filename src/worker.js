@@ -97,7 +97,14 @@ async function fetchCrCsv(baseUrl, key1, key2, key3) {
   try {
     res = await fetch(url, {
       method: "GET",
-      headers: { Accept: "text/csv, text/plain" },
+      headers: {
+        Accept: "text/csv, text/plain, */*",
+        "Accept-Language": "en-US,en;q=0.9",
+        "User-Agent":
+          "Mozilla/5.0 (compatible; RTC-CompanySearch-Worker/1.0; +https://rtc-companysearch.chrislau.workers.dev)",
+        Referer: "https://data.cr.gov.hk/",
+        Origin: "https://data.cr.gov.hk",
+      },
       signal: controller.signal,
     });
   } finally {
